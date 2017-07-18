@@ -1,0 +1,21 @@
+22:18:24 **** Rebuild of configuration Debug for project monkc_win64 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\monkc.o" "..\\monkc_win64\\monkc.c" 
+..\monkc_win64\monkc.c:110:20: warning: 'BCOLOR' defined but not used [-Wunused-variable]
+ static const char* BCOLOR = BBLACK;
+                    ^~~~~~
+..\monkc_win64\monkc.c:109:20: warning: 'FCOLOR' defined but not used [-Wunused-variable]
+ static const char* FCOLOR = FRED;
+                    ^~~~~~
+..\monkc_win64\monkc.c: In function 'printc':
+..\monkc_win64\monkc.c:116:12: warning: 'ret' is used uninitialized in this function [-Wuninitialized]
+     return ret;
+            ^~~
+as -o "monkc_win64\\trampoline_win64.o" "..\\monkc_win64\\trampoline_win64.asm" 
+ar -r libmonkc_win64.a "monkc_win64\\monkc.o" "monkc_win64\\trampoline_win64.o" 
+22:18:25 **** Incremental Build of configuration Debug for project monkc_win64_demo ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\SunYuLi\\eclipse-workspace\\monkc_win64\\Debug" -o monkc_win64_demo.exe "src\\HiWin.o" "src\\monkc4winExample.o" -lmonkc_win64 
+Info: Nothing to build for monkc_win64_demo
+Info: Nothing to build for monkc_win64_demo
+Info: Nothing to build for monkc_win64_demo

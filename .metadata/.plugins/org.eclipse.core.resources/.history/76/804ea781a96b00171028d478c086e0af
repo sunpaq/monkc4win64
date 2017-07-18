@@ -1,0 +1,24 @@
+
+#include "HiWin.h"
+
+oninit(HiWin)
+{
+	if(init(MCObject)) {
+		return obj;
+	}
+	return null;
+}
+
+method(HiWin, void, sayHello, voida)
+{
+
+}
+
+onload(HiWin)
+{
+	if(load(MCObject)) {
+		binding(HiWin, void, sayHello, voida);
+		return cla;
+	}
+	return null;
+}

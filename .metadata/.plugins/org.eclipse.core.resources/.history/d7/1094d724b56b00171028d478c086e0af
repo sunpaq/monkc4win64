@@ -1,0 +1,11 @@
+.text
+.globl _push_jump
+.p2align 4, 0x00
+_push_jump:
+	movq (%rcx), %r15
+	movq $0, (%rcx)
+	cmpq $0, %r15
+	je 0f
+	jmp *%r15
+0:
+	ret
