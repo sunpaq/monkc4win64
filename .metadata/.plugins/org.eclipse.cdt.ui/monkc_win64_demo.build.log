@@ -1,1 +1,8 @@
-Info: Nothing to build for monkc_win64_demo
+23:48:13 **** Rebuild of configuration Debug for project monkc_win64_demo ****
+Info: Internal Builder is used for build
+gcc "-IC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\monkc_win64" "-includeC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\monkc_win64\\monkc.h" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\monkc4winExample.o" "..\\src\\monkc4winExample.c" 
+gcc "-IC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\monkc_win64" "-includeC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\monkc_win64\\monkc.h" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HiWin.o" "..\\src\\HiWin.c" 
+gcc "-LC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\Debug" -o monkc_win64_demo.exe "src\\HiWin.o" "src\\monkc4winExample.o" -lmonkc_win64 
+
+23:48:14 Build Finished (took 883ms)
+
