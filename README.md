@@ -13,6 +13,18 @@ port Monk-C into Windows (64bit)
     monkc4win64/x64/Debug/monkc4win64lib.lib
     monkc4win64/monkc4win64lib/monkc.h
 
+### Setup Visual Studio project to use static library
+
+    create a folder under your project root
+    drop all the .h .lib files you need in it
+    
+    right click the project and open 'property'
+    'VC++ Directories' - 'Include Directories' => add the folder contains your .h
+    'VC++ Directories' - 'Library Directories' => add the folder contains your .lib
+    'Linker' - 'Input' - 'Additional Dependencies' => add the your_lib_name.lib;
+    click 'Apply' button
+    click 'Save/OK' button
+
 ### About build assembly use Visual Studio
 
     Visual Studio will not compile .asm file by default
