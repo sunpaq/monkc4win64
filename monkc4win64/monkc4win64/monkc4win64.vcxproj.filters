@@ -33,13 +33,5 @@
     <ClInclude Include="Monkey.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="monkc.h">
-      <Filter>src</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="monkc4win64lib.lib">
-      <Filter>src</Filter>
-    </Library>
   </ItemGroup>
 </Project>

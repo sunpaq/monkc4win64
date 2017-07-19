@@ -2,6 +2,8 @@
 #include "MonkeyExt.h"
 #include "HiWin.h"
 
+#include <glfw3.h>
+
 void testOOP()
 {
 	extend(Monkey, Ext);
@@ -29,8 +31,8 @@ void testOOP()
 	printf("%s\n", "finish");
 }
 
-int main(void) {
-
+void appLaunch(void)
+{
 	testOOP();
 
 	HiWin* hi = ff(new(HiWin), initWithName, "Steve");
@@ -38,5 +40,55 @@ int main(void) {
 	ff(hi, sayHello, 0);
 
 	system("pause");
+}
+
+void setupGL(void)
+{
+	glClearColor(0.5, 0.5, 1.0, 1.0);
+}
+
+void renderGL(void)
+{
+	glClear(GL_COLOR_BUFFER_BIT);
+}
+
+int main(void)
+{
+	appLaunch();
+	
+	GLFWwindow* window;
+
+	/* Initialize the library */
+	if (!glfwInit())
+		return -1;
+
+	/* Create a windowed mode window and its OpenGL context */
+	window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+	if (!window)
+	{
+		glfwTerminate();
+		return -1;
+	}
+
+	/* Make the window's context current */
+	glfwMakeContextCurrent(window);
+
+	setupGL();
+
+	/* Loop until the user closes the window */
+	while (!glfwWindowShouldClose(window))
+	{
+		/* Render here */
+		renderGL();
+
+		/* Swap front and back buffers */
+		glfwSwapBuffers(window);
+
+		/* Poll for and process events */
+		glfwPollEvents();
+	}
+
+	glfwTerminate();
 	return 0;
 }
+

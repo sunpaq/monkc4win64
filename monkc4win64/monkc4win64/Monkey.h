@@ -1,7 +1,7 @@
 #ifndef Monkey_
 #define Monkey_
 
-#include "monkc.h"
+#include <monkc.h>
 
 class(Monkey, MCObject,
 	const char* name;
