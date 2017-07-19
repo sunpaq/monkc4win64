@@ -1,6 +1,0 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (MC.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  main.c
-  HiWin.c
-  正在生成代码...
-  MC.vcxproj -> C:\Users\SunYuLi\monkc4win64\monkc4win64\MC\x64\Debug\monkc4win64.exe
-  MC.vcxproj -> C:\Users\SunYuLi\monkc4win64\monkc4win64\MC\x64\Debug\monkc4win64.pdb (Partial PDB)
