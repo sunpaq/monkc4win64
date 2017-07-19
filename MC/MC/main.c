@@ -1,13 +1,12 @@
 #include "HiWin.h"
+#include "libs/MCString.h"
 
 int main(void)
 {
 	HiWin* hi =ff(new(HiWin), initWithName, "Steve");
-	//static call
-	HiWin_sayHello(hi, 0);
-	//dynamic call
 	ff(hi, sayHello, 0);
 	
+	release(hi);
 	system("pause");
 	return 0;
 }
