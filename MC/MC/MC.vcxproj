@@ -111,6 +111,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Flyable.h" />
     <ClInclude Include="HiWin.h" />
     <ClInclude Include="libs\MCArray.h" />
     <ClInclude Include="libs\MCArrayLinkedList.h" />
@@ -132,10 +133,14 @@
     <ClInclude Include="libs\MCString.h" />
     <ClInclude Include="libs\MCTree.h" />
     <ClInclude Include="libs\monkc.h" />
+    <ClInclude Include="Monkey.h" />
+    <ClInclude Include="MonkeyExt.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HiWin.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="Monkey.c" />
+    <ClCompile Include="MonkeyExt.c" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="libs\libmonkc_win64.a" />

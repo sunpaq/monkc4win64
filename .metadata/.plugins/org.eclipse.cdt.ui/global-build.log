@@ -1,5 +1,287 @@
-13:46:29 **** Incremental Build of configuration Debug for project monkc_win64 ****
+14:16:51 **** Rebuild of configuration Debug for project monkc_win64 ****
 Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\MCMap.o" "..\\monkc_win64\\MCMap.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\MCSet.o" "..\\monkc_win64\\MCSet.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\MCClock.o" "..\\monkc_win64\\MCClock.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\MCMath.o" "..\\monkc_win64\\MCMath.c" 
+In file included from ..\monkc_win64\MCMath.c:1:0:
+..\monkc_win64\MCMath.h: In function 'MCVector2From3':
+..\monkc_win64\MCMath.h:89:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector2){vec3.x, vec3.y};
+            ^
+                        {             }
+..\monkc_win64\MCMath.h: In function 'MCVector3From4':
+..\monkc_win64\MCMath.h:94:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){vec4.x, vec4.y, vec4.z};
+            ^
+                        {                     }
+..\monkc_win64\MCMath.h: In function 'MCQuaternionFromVec3':
+..\monkc_win64\MCMath.h:125:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCQuaternion){v.x, v.y, v.z, 0.0f};
+            ^
+                           {                  }
+..\monkc_win64\MCMath.h: In function 'MCQuaternionZero':
+..\monkc_win64\MCMath.h:130:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCQuaternion){0,0,0,0};
+            ^
+                           {      }
+..\monkc_win64\MCMath.h: At top level:
+..\monkc_win64\MCMath.h:155:44: warning: missing braces around initializer [-Wmissing-braces]
+ static const MCMatrix3 MCMatrix3Identity = {
+                                            ^
+     1.0f, 0.0f, 0.0f,
+     {
+..\monkc_win64\MCMath.h:159:1:
+ };
+ }
+..\monkc_win64\MCMath.h:161:44: warning: missing braces around initializer [-Wmissing-braces]
+ static const MCMatrix4 MCMatrix4Identity = {
+                                            ^
+     1,0,0,0,
+     {
+..\monkc_win64\MCMath.h:166:1:
+ };
+ }
+..\monkc_win64\MCMath.h: In function 'MCVector3Normalize':
+..\monkc_win64\MCMath.h:199:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){x,y,z};
+            ^
+                        {    }
+..\monkc_win64\MCMath.h: In function 'MCVector3Make':
+..\monkc_win64\MCMath.h:203:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){x, y, z};
+            ^
+                        {      }
+..\monkc_win64\MCMath.h: In function 'MCVector4Make':
+..\monkc_win64\MCMath.h:207:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector4){x, y, z, w};
+            ^
+                        {         }
+..\monkc_win64\MCMath.h: In function 'MCVector3MakeReverse':
+..\monkc_win64\MCMath.h:211:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){-x, -y, -z};
+            ^
+                        {         }
+..\monkc_win64\MCMath.h: In function 'MCVector3Reverse':
+..\monkc_win64\MCMath.h:215:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){-vtx.x, -vtx.y, -vtx.z};
+            ^
+                        {                     }
+..\monkc_win64\MCMath.h: In function 'MCVector3Middle':
+..\monkc_win64\MCMath.h:219:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){(v1.x+v2.x)/2.0f, (v1.y+v2.y)/2.0f, (v1.z+v2.z)/2.0f};
+            ^
+                        {                                                   }
+..\monkc_win64\MCMath.h: In function 'MCVector3Add':
+..\monkc_win64\MCMath.h:223:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){v1.x+v2.x, v1.y+v2.y, v1.z+v2.z};
+            ^
+                        {                              }
+..\monkc_win64\MCMath.h: In function 'MCVector3Sub':
+..\monkc_win64\MCMath.h:228:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){v1.x-v2.x, v1.y-v2.y, v1.z-v2.z};
+            ^
+                        {                              }
+..\monkc_win64\MCMath.h: In function 'MCVector3Cross':
+..\monkc_win64\MCMath.h:236:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){v1.y*v2.z - v2.y*v1.z,
+            ^
+                        {
+..\monkc_win64\MCMath.h:238:30:
+         v1.x*v2.y - v2.x*v1.y};
+                              }
+..\monkc_win64\MCMath.h: In function 'MCQuaternionGProduct':
+..\monkc_win64\MCMath.h:246:25: warning: missing braces around initializer [-Wmissing-braces]
+     MCVector3 pvector = (MCVector3){p.x, p.y, p.z};
+                         ^
+                                     {            }
+..\monkc_win64\MCMath.h:247:25: warning: missing braces around initializer [-Wmissing-braces]
+     MCVector3 qvector = (MCVector3){q.x, q.y, q.z};
+                         ^
+                                     {            }
+..\monkc_win64\MCMath.h:250:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCQuaternion) {
+            ^
+         pscalar * qvector.x + qscalar * pvector.x + pxq.x,
+         {
+..\monkc_win64\MCMath.h:255:5:
+     };
+     }
+..\monkc_win64\MCMath.h: In function 'MCQuaternionConjugate':
+..\monkc_win64\MCMath.h:272:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCQuaternion) { -q.x, -q.y, -q.z, q.w };
+            ^
+                             {                     }
+..\monkc_win64\MCMath.h: In function 'MCQuaternionFromAxisAngle_Radian':
+..\monkc_win64\MCMath.h:278:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCQuaternion) {
+            ^
+         axis.x * sin(r),
+         {
+..\monkc_win64\MCMath.h:283:5:
+     };
+     }
+..\monkc_win64\MCMath.h: In function 'MCQuaternionSwapYZ':
+..\monkc_win64\MCMath.h:288:22: warning: missing braces around initializer [-Wmissing-braces]
+     MCVector3 axis = (MCVector3){q->x, q->y, q->z};
+                      ^
+                                  {               }
+..\monkc_win64\MCMath.h:292:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCQuaternion) {
+            ^
+         axis.x * sin(r),
+         {
+..\monkc_win64\MCMath.h:297:5:
+     };
+     }
+..\monkc_win64\MCMath.h: In function 'MCVector3RotateByQuaternion':
+..\monkc_win64\MCMath.h:327:47: warning: missing braces around initializer [-Wmissing-braces]
+     MCQuaternion r1 = MCQuaternionGProduct(q, (MCQuaternion){v.x, v.y, v.z, 0.0f});
+                                               ^
+                                                              {                  }
+..\monkc_win64\MCMath.h:329:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){r2.x, r2.y, r2.z};
+            ^
+                        {               }
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\MCIO.o" "..\\monkc_win64\\MCIO.c" 
+In file included from ..\monkc_win64\MCString.h:3:0,
+                 from ..\monkc_win64\MCIO.h:6,
+                 from ..\monkc_win64\MCIO.c:1:
+..\monkc_win64\MCLexer.h: In function 'isFilename':
+..\monkc_win64\MCLexer.h:124:11: warning: comparison between pointer and zero character constant [-Wpointer-compare]
+     if (w != NUL) {
+           ^~
+..\monkc_win64\MCLexer.h:124:9: note: did you mean to dereference the pointer?
+     if (w != NUL) {
+         ^
+..\monkc_win64\MCLexer.h: In function 'tokenize':
+..\monkc_win64\MCLexer.h:216:21: warning: missing braces around initializer [-Wmissing-braces]
+     MCToken token = (MCToken){MCTokenUnknown, 0};
+                     ^
+                                               {}
+..\monkc_win64\MCIO.c: At top level:
+..\monkc_win64\MCIO.c:4:0: warning: ignoring #pragma mark  [-Wunknown-pragmas]
+ #pragma mark - MCFile unbuffered IO
+ 
+..\monkc_win64\MCIO.c: In function 'MCFile_flushAllCacheToDisk':
+..\monkc_win64\MCIO.c:8:2: warning: implicit declaration of function 'sync'; did you mean 'send'? [-Wimplicit-function-declaration]
+  sync();
+  ^~~~
+  send
+..\monkc_win64\MCIO.c: In function 'MCFile_flushAFileCacheToDisk':
+..\monkc_win64\MCIO.c:13:12: warning: implicit declaration of function 'fsync' [-Wimplicit-function-declaration]
+     return fsync(fd);
+            ^~~~~
+..\monkc_win64\MCIO.c: In function 'MCFile_createSymbolLink':
+..\monkc_win64\MCIO.c:70:16: warning: implicit declaration of function 'symlink'; did you mean 'unlink'? [-Wimplicit-function-declaration]
+     if ((res = symlink(pathname, linkname))!= -1)
+                ^~~~~~~
+                unlink
+..\monkc_win64\MCIO.c: In function 'MCFile_readFromBegin':
+..\monkc_win64\MCIO.c:136:12: warning: implicit declaration of function 'pread'; did you mean 'read'? [-Wimplicit-function-declaration]
+     return pread(obj->fd, obj->buffer, nbytes, offset);
+            ^~~~~
+            read
+..\monkc_win64\MCIO.c: In function 'MCFile_writeToBegin':
+..\monkc_win64\MCIO.c:151:12: warning: implicit declaration of function 'pwrite'; did you mean 'write'? [-Wimplicit-function-declaration]
+     return pwrite(obj->fd, buf, nbytes, offset);
+            ^~~~~~
+            write
+..\monkc_win64\MCIO.c: In function 'MCFile_printAttribute':
+..\monkc_win64\MCIO.c:183:34: warning: unknown conversion type character 'l' in format [-Wformat=]
+     printf("uid:%d gid:%d size:%lld st_mode:%o lmtime:%s",
+                                  ^
+..\monkc_win64\MCIO.c:183:46: warning: format '%o' expects argument of type 'unsigned int', but argument 4 has type '_off_t {aka long int}' [-Wformat=]
+     printf("uid:%d gid:%d size:%lld st_mode:%o lmtime:%s",
+                                             ~^
+                                             %lo
+..\monkc_win64\MCIO.c:186:12:
+            obj->attribute.st_size,
+            ~~~~~~~~~~~~~~~~~~~~~~             
+..\monkc_win64\MCIO.c:183:56: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
+     printf("uid:%d gid:%d size:%lld st_mode:%o lmtime:%s",
+                                                       ~^
+                                                       %d
+..\monkc_win64\MCIO.c:187:12:
+            obj->attribute.st_mode,
+            ~~~~~~~~~~~~~~~~~~~~~~                       
+..\monkc_win64\MCIO.c:183:12: warning: too many arguments for format [-Wformat-extra-args]
+     printf("uid:%d gid:%d size:%lld st_mode:%o lmtime:%s",
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\monkc_win64\MCIO.c:183:34: warning: unknown conversion type character 'l' in format [-Wformat=]
+     printf("uid:%d gid:%d size:%lld st_mode:%o lmtime:%s",
+                                  ^
+..\monkc_win64\MCIO.c:183:46: warning: format '%o' expects argument of type 'unsigned int', but argument 4 has type '_off_t {aka long int}' [-Wformat=]
+     printf("uid:%d gid:%d size:%lld st_mode:%o lmtime:%s",
+                                             ~^
+                                             %lo
+..\monkc_win64\MCIO.c:186:12:
+            obj->attribute.st_size,
+            ~~~~~~~~~~~~~~~~~~~~~~             
+..\monkc_win64\MCIO.c:183:56: warning: format '%s' expects argument of type 'char *', but argument 5 has type 'int' [-Wformat=]
+     printf("uid:%d gid:%d size:%lld st_mode:%o lmtime:%s",
+                                                       ~^
+                                                       %d
+..\monkc_win64\MCIO.c:187:12:
+            obj->attribute.st_mode,
+            ~~~~~~~~~~~~~~~~~~~~~~                       
+..\monkc_win64\MCIO.c:183:12: warning: too many arguments for format [-Wformat-extra-args]
+     printf("uid:%d gid:%d size:%lld st_mode:%o lmtime:%s",
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\monkc_win64\MCIO.c: At top level:
+..\monkc_win64\MCIO.c:224:0: warning: ignoring #pragma mark  [-Wunknown-pragmas]
+ #pragma mark - MCStream buffered IO
+ 
+..\monkc_win64\MCIO.c:408:0: warning: ignoring #pragma mark  [-Wunknown-pragmas]
+ #pragma mark - MCSelect
+ 
+..\monkc_win64\MCIO.c:508:0: warning: ignoring #pragma mark  [-Wunknown-pragmas]
+ #pragma mark - MCProgress
+ 
+..\monkc_win64\MCIO.c: In function 'MCProcess_changeCurrentWorkingDirByFd':
+..\monkc_win64\MCIO.c:521:13: warning: implicit declaration of function 'fchdir'; did you mean 'chdir'? [-Wimplicit-function-declaration]
+  if ((res = fchdir(fd))!= -1)
+             ^~~~~~
+             chdir
+..\monkc_win64\MCIO.c: In function 'MCSelect_isFdReady':
+..\monkc_win64\MCIO.c:492:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from ..\monkc_win64\MCIO.c:1:0:
+At top level:
+..\monkc_win64\MCIO.h:130:20: warning: 'MCStreamOpenBin_Append_NoRead' defined but not used [-Wunused-variable]
+ static const char* MCStreamOpenBin_Append_NoRead = "ab";
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\monkc_win64\MCIO.h:129:20: warning: 'MCStreamOpenBin_Append' defined but not used [-Wunused-variable]
+ static const char* MCStreamOpenBin_Append = "ab+";
+                    ^~~~~~~~~~~~~~~~~~~~~~
+..\monkc_win64\MCIO.h:128:20: warning: 'MCStreamOpenBin_ReadWrite_NoCreate' defined but not used [-Wunused-variable]
+ static const char* MCStreamOpenBin_ReadWrite_NoCreate = "rb+";
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\monkc_win64\MCIO.h:127:20: warning: 'MCStreamOpenBin_ReadWrite' defined but not used [-Wunused-variable]
+ static const char* MCStreamOpenBin_ReadWrite = "wb+";
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\monkc_win64\MCIO.h:126:20: warning: 'MCStreamOpenBin_WriteOnly' defined but not used [-Wunused-variable]
+ static const char* MCStreamOpenBin_WriteOnly = "wb";
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\monkc_win64\MCIO.h:125:20: warning: 'MCStreamOpenBin_ReadOnly' defined but not used [-Wunused-variable]
+ static const char* MCStreamOpenBin_ReadOnly = "rb";
+                    ^~~~~~~~~~~~~~~~~~~~~~~~
+..\monkc_win64\MCIO.h:123:20: warning: 'MCStreamOpen_Append_NoRead' defined but not used [-Wunused-variable]
+ static const char* MCStreamOpen_Append_NoRead = "a";
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\monkc_win64\MCIO.h:122:20: warning: 'MCStreamOpen_Append' defined but not used [-Wunused-variable]
+ static const char* MCStreamOpen_Append = "a+";
+                    ^~~~~~~~~~~~~~~~~~~
+..\monkc_win64\MCIO.h:121:20: warning: 'MCStreamOpen_ReadWrite_NoCreate' defined but not used [-Wunused-variable]
+ static const char* MCStreamOpen_ReadWrite_NoCreate = "r+";
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\monkc_win64\MCIO.h:119:20: warning: 'MCStreamOpen_WriteOnly' defined but not used [-Wunused-variable]
+ static const char* MCStreamOpen_WriteOnly = "w";
+                    ^~~~~~~~~~~~~~~~~~~~~~
+..\monkc_win64\MCIO.h:118:20: warning: 'MCStreamOpen_ReadOnly' defined but not used [-Wunused-variable]
+ static const char* MCStreamOpen_ReadOnly = "r";
+                    ^~~~~~~~~~~~~~~~~~~~~
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\MCString.o" "..\\monkc_win64\\MCString.c" 
 In file included from ..\monkc_win64\MCString.h:3:0,
                  from ..\monkc_win64\MCString.c:1:
@@ -163,13 +445,230 @@ In file included from ..\monkc_win64\MCString.c:2:0:
                      sprintf(digits, "%ld", count);
                                       ~~^
                                       %I64d
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\MCArray.o" "..\\monkc_win64\\MCArray.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\MCBuffer.o" "..\\monkc_win64\\MCBuffer.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\MCGeometry.o" "..\\monkc_win64\\MCGeometry.c" 
+In file included from ..\monkc_win64\MCGeometry.h:13:0,
+                 from ..\monkc_win64\MCGeometry.c:10:
+..\monkc_win64\MCMath.h: In function 'MCVector2From3':
+..\monkc_win64\MCMath.h:89:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector2){vec3.x, vec3.y};
+            ^
+                        {             }
+..\monkc_win64\MCMath.h: In function 'MCVector3From4':
+..\monkc_win64\MCMath.h:94:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){vec4.x, vec4.y, vec4.z};
+            ^
+                        {                     }
+..\monkc_win64\MCMath.h: In function 'MCQuaternionFromVec3':
+..\monkc_win64\MCMath.h:125:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCQuaternion){v.x, v.y, v.z, 0.0f};
+            ^
+                           {                  }
+..\monkc_win64\MCMath.h: In function 'MCQuaternionZero':
+..\monkc_win64\MCMath.h:130:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCQuaternion){0,0,0,0};
+            ^
+                           {      }
+..\monkc_win64\MCMath.h: At top level:
+..\monkc_win64\MCMath.h:155:44: warning: missing braces around initializer [-Wmissing-braces]
+ static const MCMatrix3 MCMatrix3Identity = {
+                                            ^
+     1.0f, 0.0f, 0.0f,
+     {
+..\monkc_win64\MCMath.h:159:1:
+ };
+ }
+..\monkc_win64\MCMath.h:161:44: warning: missing braces around initializer [-Wmissing-braces]
+ static const MCMatrix4 MCMatrix4Identity = {
+                                            ^
+     1,0,0,0,
+     {
+..\monkc_win64\MCMath.h:166:1:
+ };
+ }
+..\monkc_win64\MCMath.h: In function 'MCVector3Normalize':
+..\monkc_win64\MCMath.h:199:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){x,y,z};
+            ^
+                        {    }
+..\monkc_win64\MCMath.h: In function 'MCVector3Make':
+..\monkc_win64\MCMath.h:203:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){x, y, z};
+            ^
+                        {      }
+..\monkc_win64\MCMath.h: In function 'MCVector4Make':
+..\monkc_win64\MCMath.h:207:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector4){x, y, z, w};
+            ^
+                        {         }
+..\monkc_win64\MCMath.h: In function 'MCVector3MakeReverse':
+..\monkc_win64\MCMath.h:211:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){-x, -y, -z};
+            ^
+                        {         }
+..\monkc_win64\MCMath.h: In function 'MCVector3Reverse':
+..\monkc_win64\MCMath.h:215:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){-vtx.x, -vtx.y, -vtx.z};
+            ^
+                        {                     }
+..\monkc_win64\MCMath.h: In function 'MCVector3Middle':
+..\monkc_win64\MCMath.h:219:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){(v1.x+v2.x)/2.0f, (v1.y+v2.y)/2.0f, (v1.z+v2.z)/2.0f};
+            ^
+                        {                                                   }
+..\monkc_win64\MCMath.h: In function 'MCVector3Add':
+..\monkc_win64\MCMath.h:223:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){v1.x+v2.x, v1.y+v2.y, v1.z+v2.z};
+            ^
+                        {                              }
+..\monkc_win64\MCMath.h: In function 'MCVector3Sub':
+..\monkc_win64\MCMath.h:228:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){v1.x-v2.x, v1.y-v2.y, v1.z-v2.z};
+            ^
+                        {                              }
+..\monkc_win64\MCMath.h: In function 'MCVector3Cross':
+..\monkc_win64\MCMath.h:236:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){v1.y*v2.z - v2.y*v1.z,
+            ^
+                        {
+..\monkc_win64\MCMath.h:238:30:
+         v1.x*v2.y - v2.x*v1.y};
+                              }
+..\monkc_win64\MCMath.h: In function 'MCQuaternionGProduct':
+..\monkc_win64\MCMath.h:246:25: warning: missing braces around initializer [-Wmissing-braces]
+     MCVector3 pvector = (MCVector3){p.x, p.y, p.z};
+                         ^
+                                     {            }
+..\monkc_win64\MCMath.h:247:25: warning: missing braces around initializer [-Wmissing-braces]
+     MCVector3 qvector = (MCVector3){q.x, q.y, q.z};
+                         ^
+                                     {            }
+..\monkc_win64\MCMath.h:250:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCQuaternion) {
+            ^
+         pscalar * qvector.x + qscalar * pvector.x + pxq.x,
+         {
+..\monkc_win64\MCMath.h:255:5:
+     };
+     }
+..\monkc_win64\MCMath.h: In function 'MCQuaternionConjugate':
+..\monkc_win64\MCMath.h:272:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCQuaternion) { -q.x, -q.y, -q.z, q.w };
+            ^
+                             {                     }
+..\monkc_win64\MCMath.h: In function 'MCQuaternionFromAxisAngle_Radian':
+..\monkc_win64\MCMath.h:278:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCQuaternion) {
+            ^
+         axis.x * sin(r),
+         {
+..\monkc_win64\MCMath.h:283:5:
+     };
+     }
+..\monkc_win64\MCMath.h: In function 'MCQuaternionSwapYZ':
+..\monkc_win64\MCMath.h:288:22: warning: missing braces around initializer [-Wmissing-braces]
+     MCVector3 axis = (MCVector3){q->x, q->y, q->z};
+                      ^
+                                  {               }
+..\monkc_win64\MCMath.h:292:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCQuaternion) {
+            ^
+         axis.x * sin(r),
+         {
+..\monkc_win64\MCMath.h:297:5:
+     };
+     }
+..\monkc_win64\MCMath.h: In function 'MCVector3RotateByQuaternion':
+..\monkc_win64\MCMath.h:327:47: warning: missing braces around initializer [-Wmissing-braces]
+     MCQuaternion r1 = MCQuaternionGProduct(q, (MCQuaternion){v.x, v.y, v.z, 0.0f});
+                                               ^
+                                                              {                  }
+..\monkc_win64\MCMath.h:329:12: warning: missing braces around initializer [-Wmissing-braces]
+     return (MCVector3){r2.x, r2.y, r2.z};
+            ^
+                        {               }
+..\monkc_win64\MCGeometry.c: In function 'MCPolygonDumpVertexData':
+..\monkc_win64\MCGeometry.c:229:20: warning: unknown conversion type character 'z' in format [-Wformat=]
+     printf("total %zu vertexes\n", poly->count);
+                    ^
+..\monkc_win64\MCGeometry.c:229:12: warning: too many arguments for format [-Wformat-extra-args]
+     printf("total %zu vertexes\n", poly->count);
+            ^~~~~~~~~~~~~~~~~~~~~~
+..\monkc_win64\MCGeometry.c:229:20: warning: unknown conversion type character 'z' in format [-Wformat=]
+     printf("total %zu vertexes\n", poly->count);
+                    ^
+..\monkc_win64\MCGeometry.c:229:12: warning: too many arguments for format [-Wformat-extra-args]
+     printf("total %zu vertexes\n", poly->count);
+            ^~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\MCHeap.o" "..\\monkc_win64\\MCHeap.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\MCBits.o" "..\\monkc_win64\\MCBits.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\MCContext.o" "..\\monkc_win64\\MCContext.c" 
+In file included from ..\monkc_win64\MCContext.c:2:0:
+..\monkc_win64\MCLexer.h: In function 'isFilename':
+..\monkc_win64\MCLexer.h:124:11: warning: comparison between pointer and zero character constant [-Wpointer-compare]
+     if (w != NUL) {
+           ^~
+..\monkc_win64\MCLexer.h:124:9: note: did you mean to dereference the pointer?
+     if (w != NUL) {
+         ^
+..\monkc_win64\MCLexer.h: In function 'tokenize':
+..\monkc_win64\MCLexer.h:216:21: warning: missing braces around initializer [-Wmissing-braces]
+     MCToken token = (MCToken){MCTokenUnknown, 0};
+                     ^
+                                               {}
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\MCLinkedList.o" "..\\monkc_win64\\MCLinkedList.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\monkc.o" "..\\monkc_win64\\monkc.c" 
+..\monkc_win64\monkc.c:110:20: warning: 'BCOLOR' defined but not used [-Wunused-variable]
+ static const char* BCOLOR = BBLACK;
+                    ^~~~~~
+..\monkc_win64\monkc.c:109:20: warning: 'FCOLOR' defined but not used [-Wunused-variable]
+ static const char* FCOLOR = FRED;
+                    ^~~~~~
+..\monkc_win64\monkc.c: In function 'printc':
+..\monkc_win64\monkc.c:116:12: warning: 'ret' is used uninitialized in this function [-Wuninitialized]
+     return ret;
+            ^~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\MCArrayLinkedList.o" "..\\monkc_win64\\MCArrayLinkedList.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\MCTree.o" "..\\monkc_win64\\MCTree.c" 
+..\monkc_win64\MCTree.c: In function 'MCBST_printTree':
+..\monkc_win64\MCTree.c:89:21: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'size_t {aka long long unsigned int}' [-Wformat=]
+     printf("total %ld nodes\n", obj->count);
+                   ~~^           ~~~~~~~~~~
+                   %I64d
+..\monkc_win64\MCTree.c:89:21: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'size_t {aka long long unsigned int}' [-Wformat=]
+     printf("total %ld nodes\n", obj->count);
+                   ~~^           ~~~~~~~~~~
+                   %I64d
+..\monkc_win64\MCTree.c: In function 'insertNodeIntoParent':
+..\monkc_win64\MCTree.c:153:43: warning: array subscript has type 'char' [-Wchar-subscripts]
+         TrieNode* current = parent->childs[node->byte];
+                                           ^
+..\monkc_win64\MCTree.c:155:27: warning: array subscript has type 'char' [-Wchar-subscripts]
+             parent->childs[node->byte] = node;
+                           ^
+..\monkc_win64\MCTree.c: In function 'retrievalNodeByKey':
+..\monkc_win64\MCTree.c:194:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+         node = p->childs[c];
+                         ^
+as -o "monkc_win64\\trampoline_win64.o" "..\\monkc_win64\\trampoline_win64.asm" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\MCGraph.o" "..\\monkc_win64\\MCGraph.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "monkc_win64\\MCSort.o" "..\\monkc_win64\\MCSort.c" 
+..\monkc_win64\MCSort.c: In function 'MCSort_printArray':
+..\monkc_win64\MCSort.c:87:36: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'size_t {aka long long unsigned int}' [-Wformat=]
+         printf("element of array[%ld]=%.2f\n", i, obj->array[i].mcfloat);
+                                  ~~^
+                                  %I64d
+..\monkc_win64\MCSort.c:87:36: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'size_t {aka long long unsigned int}' [-Wformat=]
+         printf("element of array[%ld]=%.2f\n", i, obj->array[i].mcfloat);
+                                  ~~^
+                                  %I64d
 ar -r libmonkc_win64.a "monkc_win64\\MCArray.o" "monkc_win64\\MCArrayLinkedList.o" "monkc_win64\\MCBits.o" "monkc_win64\\MCBuffer.o" "monkc_win64\\MCClock.o" "monkc_win64\\MCContext.o" "monkc_win64\\MCGeometry.o" "monkc_win64\\MCGraph.o" "monkc_win64\\MCHeap.o" "monkc_win64\\MCIO.o" "monkc_win64\\MCLinkedList.o" "monkc_win64\\MCMap.o" "monkc_win64\\MCMath.o" "monkc_win64\\MCSet.o" "monkc_win64\\MCSort.o" "monkc_win64\\MCString.o" "monkc_win64\\MCTree.o" "monkc_win64\\monkc.o" "monkc_win64\\trampoline_win64.o" 
-13:46:30 **** Incremental Build of configuration Debug for project monkc_win64_demo ****
+14:16:58 **** Rebuild of configuration Debug for project monkc_win64_demo ****
 Info: Internal Builder is used for build
-gcc "-LC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\Debug" -o monkc_win64_demo.exe "src\\HiWin.o" "src\\Monkey.o" "src\\MonkeyExt.o" "src\\monkc4winExample.o" -lmonkc_win64 
-Info: Nothing to build for monkc_win64_demo
-13:48:37 **** Incremental Build of configuration Debug for project monkc_win64_demo ****
-Info: Internal Builder is used for build
+gcc "-IC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\monkc_win64" "-includeC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\monkc_win64\\monkc.h" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HiWin.o" "..\\src\\HiWin.c" 
+gcc "-IC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\monkc_win64" "-includeC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\monkc_win64\\monkc.h" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MonkeyExt.o" "..\\src\\MonkeyExt.c" 
+gcc "-IC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\monkc_win64" "-includeC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\monkc_win64\\monkc.h" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Monkey.o" "..\\src\\Monkey.c" 
 gcc "-IC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\monkc_win64" "-includeC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\monkc_win64\\monkc.h" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\monkc4winExample.o" "..\\src\\monkc4winExample.c" 
 In file included from C:\Users\SunYuLi\monkc4win64\monkc4win64\monkc_win64\monkc_win64/MCString.h:3:0,
                  from ..\src\monkc4winExample.c:19:
@@ -186,3 +685,4 @@ C:\Users\SunYuLi\monkc4win64\monkc4win64\monkc_win64\monkc_win64/MCLexer.h:216:2
                      ^
                                                {}
 gcc "-LC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\Debug" -o monkc_win64_demo.exe "src\\HiWin.o" "src\\Monkey.o" "src\\MonkeyExt.o" "src\\monkc4winExample.o" -lmonkc_win64 
+Info: Nothing to build for monkc_win64_demo
