@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="HiWin.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="libs\MCArray.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -78,6 +75,18 @@
     <ClInclude Include="libs\monkc.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Monkey.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MonkeyExt.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Flyable.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HiWin.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -86,10 +95,16 @@
     <ClCompile Include="HiWin.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Monkey.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MonkeyExt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="libs\libmonkc_win64.a">
-      <Filter>资源文件</Filter>
+      <Filter>头文件</Filter>
     </Library>
   </ItemGroup>
 </Project>
