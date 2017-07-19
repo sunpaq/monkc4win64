@@ -1,8 +1,21 @@
-23:48:13 **** Rebuild of configuration Debug for project monkc_win64_demo ****
+13:48:37 **** Incremental Build of configuration Debug for project monkc_win64_demo ****
 Info: Internal Builder is used for build
 gcc "-IC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\monkc_win64" "-includeC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\monkc_win64\\monkc.h" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\monkc4winExample.o" "..\\src\\monkc4winExample.c" 
-gcc "-IC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\monkc_win64" "-includeC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\monkc_win64\\monkc.h" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HiWin.o" "..\\src\\HiWin.c" 
-gcc "-LC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\Debug" -o monkc_win64_demo.exe "src\\HiWin.o" "src\\monkc4winExample.o" -lmonkc_win64 
+In file included from C:\Users\SunYuLi\monkc4win64\monkc4win64\monkc_win64\monkc_win64/MCString.h:3:0,
+                 from ..\src\monkc4winExample.c:19:
+C:\Users\SunYuLi\monkc4win64\monkc4win64\monkc_win64\monkc_win64/MCLexer.h: In function 'isFilename':
+C:\Users\SunYuLi\monkc4win64\monkc4win64\monkc_win64\monkc_win64/MCLexer.h:124:11: warning: comparison between pointer and zero character constant [-Wpointer-compare]
+     if (w != NUL) {
+           ^~
+C:\Users\SunYuLi\monkc4win64\monkc4win64\monkc_win64\monkc_win64/MCLexer.h:124:9: note: did you mean to dereference the pointer?
+     if (w != NUL) {
+         ^
+C:\Users\SunYuLi\monkc4win64\monkc4win64\monkc_win64\monkc_win64/MCLexer.h: In function 'tokenize':
+C:\Users\SunYuLi\monkc4win64\monkc4win64\monkc_win64\monkc_win64/MCLexer.h:216:21: warning: missing braces around initializer [-Wmissing-braces]
+     MCToken token = (MCToken){MCTokenUnknown, 0};
+                     ^
+                                               {}
+gcc "-LC:\\Users\\SunYuLi\\monkc4win64\\monkc4win64\\monkc_win64\\Debug" -o monkc_win64_demo.exe "src\\HiWin.o" "src\\Monkey.o" "src\\MonkeyExt.o" "src\\monkc4winExample.o" -lmonkc_win64 
 
-23:48:14 Build Finished (took 883ms)
+13:48:38 Build Finished (took 484ms)
 

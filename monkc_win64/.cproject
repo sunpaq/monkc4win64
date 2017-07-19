@@ -55,17 +55,15 @@
 				<extensions>
 					<extension id="org.eclipse.cdt.core.Cygwin_PE" point="org.eclipse.cdt.core.BinaryParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 				<configuration artifactExtension="a" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.cygwin.lib.release.52441075" name="Release" parent="cdt.managedbuild.config.gnu.cygwin.lib.release">
 					<folderInfo id="cdt.managedbuild.config.gnu.cygwin.lib.release.52441075." name="/" resourcePath="">
-						<toolChain id="cdt.managedbuild.toolchain.gnu.cygwin.lib.release.397124947" name="Cygwin GCC" superClass="cdt.managedbuild.toolchain.gnu.cygwin.lib.release">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.cygwin.lib.release.397124947" name="Cygwin GCC" nonInternalBuilderId="cdt.managedbuild.target.gnu.builder.cygwin.lib.release" superClass="cdt.managedbuild.toolchain.gnu.cygwin.lib.release">
 							<targetPlatform id="cdt.managedbuild.target.gnu.platform.cygwin.lib.release.1927233638" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.cygwin.lib.release"/>
-							<builder buildPath="${workspace_loc:/monkc_win64}/Release" id="cdt.managedbuild.target.gnu.builder.cygwin.lib.release.2100723369" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.cygwin.lib.release"/>
+							<builder autoBuildTarget="all" buildPath="${workspace_loc:/monkc_win64}/Release" cleanBuildTarget="clean" id="org.eclipse.cdt.build.core.internal.builder.1699641712" incrementalBuildTarget="all" managedBuildOn="true" name="CDT Internal Builder" superClass="org.eclipse.cdt.build.core.internal.builder"/>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.cygwin.lib.release.865160848" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.cygwin.lib.release">
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1429081110" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>

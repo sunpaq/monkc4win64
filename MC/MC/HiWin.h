@@ -1,4 +1,4 @@
-#include "monkc.h"
+#include "libs/monkc.h"
 
 class(HiWin, MCObject,
 	char* name);

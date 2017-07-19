@@ -15,10 +15,67 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="monkc.h">
+    <ClInclude Include="HiWin.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="HiWin.h">
+    <ClInclude Include="libs\MCArray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCArrayLinkedList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCBits.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCClock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCContext.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCGeometry.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCGraph.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCHeap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCIO.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCJNI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCLexer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCLinkedList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCMap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCMath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCSet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCSort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCString.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\MCTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libs\monkc.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -31,7 +88,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="libmonkc_win64.a">
+    <Library Include="libs\libmonkc_win64.a">
       <Filter>资源文件</Filter>
     </Library>
   </ItemGroup>
