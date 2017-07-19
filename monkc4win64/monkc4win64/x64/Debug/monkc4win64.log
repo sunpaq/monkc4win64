@@ -1,0 +1,8 @@
+﻿  MonkeyExt.c
+  Monkey.c
+  main.c
+  HiWin.c
+  正在生成代码...
+monkc4win64lib.lib(monkc.obj) : warning LNK4099: 未找到 PDB“monkc4win64lib.pdb”(使用“monkc4win64lib.lib(monkc.obj)”或在“C:\Users\SunYuLi\Develop\monkc4win64\monkc4win64\x64\Debug\monkc4win64lib.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+  monkc4win64.vcxproj -> C:\Users\SunYuLi\Develop\monkc4win64\monkc4win64\x64\Debug\monkc4win64.exe
+  monkc4win64.vcxproj -> C:\Users\SunYuLi\Develop\monkc4win64\monkc4win64\x64\Debug\monkc4win64.pdb (Partial PDB)

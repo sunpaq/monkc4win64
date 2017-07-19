@@ -1,31 +1,34 @@
 # monkc4win64
 
-port monkc into Windows (64bit)
+port Monk-C into Windows (64bit)
 
 ### Play Monk-C use Visual Studio
 
 	Visual Studio (Community version is free now) must be installed.
-    just clone this repo and double click the .sln in monkc4win64/MC folder
+    just clone this repo and double click the .sln in the root folder
 
-### Use Monk-C on other Visual Studio project
+### Use Monk-C static library on other Visual Studio project
 
     just copy the following static library and header file
-    monkc4win64/MC/MC/monkc.h
-    monkc4win64/MC/MC/libmonkc_win64.a
+    monkc4win64/x64/Debug/monkc4win64lib.lib
+    monkc4win64/monkc4win64lib/monkc.h
 
-### Modify the Monk-C runtime library
+### About build assembly use Visual Studio
 
-    1. install the MinGW-64
-    2. install the Eclipse (and its CDT plugin)
-    3. open the workspace folder (the one has .metadata folder)
-    4. you can copy out new version .a and .h files you build.
+    Visual Studio will not compile .asm file by default
+    so if you want to modify the assembly part of Monk-C
+    please refer to the following steps:
 
-### About C99 and MinGW-64
+    right click the .asm file and open 'property'
+    'General' - 'Exclude From Build' => No
+    'General' - 'Item Type' => Custom Build Tool'
+    click 'Apply' button
 
-    C99 standard is widly used by open source software.
-    but Microsoft's compiler doesn't support this standard.
-    thanks to the MinGW project. we can use their GCC on windows
-    to build the open source software.
+    'Custom Build Tool' - 'Command Line' => ml64 /c %(fileName).asm
+    'Custom Build Tool' - 'Outputs' => %(fileName).obj
+    click 'Apply' button
+    click 'Save/OK' button
 
-    after we build the Monk-C runtime library via MinGW
-    Visual Studio projects can use the static library and header file.
+    reference blog (Chinese):
+    http://www.yiiyee.cn/Blog/asm/
+
