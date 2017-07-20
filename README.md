@@ -1,6 +1,7 @@
 # monkc4win64
 
 port Monk-C into Windows (64bit)
+using Visual Studio 2017
 
 ### Play Monk-C use Visual Studio
 
@@ -10,8 +11,8 @@ port Monk-C into Windows (64bit)
 ### Use Monk-C static library on other Visual Studio project
 
     just copy the following static library and header file
-    monkc4win64/x64/Debug/monkc4win64lib.lib
-    monkc4win64/monkc4win64lib/monkc.h
+    monkc4win64/libs/monkc.lib
+    monkc4win64/libs/monkc.h
 
 ### Setup Visual Studio project to use static library
 
@@ -24,6 +25,14 @@ port Monk-C into Windows (64bit)
     'Linker' - 'Input' - 'Additional Dependencies' => add the your_lib_name.lib;
     click 'Apply' button
     click 'Save/OK' button
+
+### Modify the monkc.lib
+
+    please clone another repo:
+    https://github.com/sunpaq/monkc
+
+    then goto the platforms/windows folder
+    double click the .sln in sub folder
 
 ### About build assembly use Visual Studio
 
