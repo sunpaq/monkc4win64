@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "monkc4win64", "monkc4win64\monkc4win64.vcxproj", "{3D5A8AAE-3710-4B41-9661-A62CDA22BBF1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "monkc4win64lib", "monkc4win64lib\monkc4win64lib.vcxproj", "{A736FC93-8420-4BEE-90EF-7A99AF9706DA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "monkc", "monkc\monkc.vcxproj", "{962D2CF1-6D82-4210-B7A9-A87329FC0D62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{3D5A8AAE-3710-4B41-9661-A62CDA22BBF1}.Debug|x64.Build.0 = Debug|x64
 		{3D5A8AAE-3710-4B41-9661-A62CDA22BBF1}.Release|x64.ActiveCfg = Release|x64
 		{3D5A8AAE-3710-4B41-9661-A62CDA22BBF1}.Release|x64.Build.0 = Release|x64
-		{A736FC93-8420-4BEE-90EF-7A99AF9706DA}.Debug|x64.ActiveCfg = Debug|x64
-		{A736FC93-8420-4BEE-90EF-7A99AF9706DA}.Debug|x64.Build.0 = Debug|x64
-		{A736FC93-8420-4BEE-90EF-7A99AF9706DA}.Release|x64.ActiveCfg = Release|x64
-		{A736FC93-8420-4BEE-90EF-7A99AF9706DA}.Release|x64.Build.0 = Release|x64
+		{962D2CF1-6D82-4210-B7A9-A87329FC0D62}.Debug|x64.ActiveCfg = Debug|x64
+		{962D2CF1-6D82-4210-B7A9-A87329FC0D62}.Debug|x64.Build.0 = Debug|x64
+		{962D2CF1-6D82-4210-B7A9-A87329FC0D62}.Release|x64.ActiveCfg = Release|x64
+		{962D2CF1-6D82-4210-B7A9-A87329FC0D62}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
