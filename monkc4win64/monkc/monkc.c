@@ -174,24 +174,94 @@ MCHashTableIndex _binding(mc_class* const aclass, const char* methodname, MCFunc
     return res;
 }
 
-static inline mc_class* findclass(const char* name)
+/*
+method table is initially set min one
+class  table is initially set max one
+
+only the max size table use chain to slove collision
+other tables will expand(rehash) until they reach the max
+*/
+
+static MCHashTableSize mc_hashtable_sizes[MCHashTableLevelCount] = {
+	//901,
+	1301,
+	3101,
+	13001,
+	31001,
+	130001
+};
+
+MCInline MCHashTableSize get_tablesize(const MCHashTableLevel level)
 {
-    //create a class hashtable
-    if(mc_global_classtable == null)
-        mc_global_classtable = new_table(MCHashTableLevel1);
-    
-    //cache
-    //    mc_hashitem* cache = mc_global_classtable->cache;
-    //    if (cache && cache->key == name) {
-    //        return (mc_class*)(cache->value.mcvoidptr);
-    //    }
-    
-    mc_hashitem* item=get_item_byhash(mc_global_classtable, hash(name), name);
-    if (item == null)
-        return null;
-    else
-        runtime_log("findClass item key:%s, value:%p\n", item->key, item->value.mcvoidptr);
-    return (mc_class*)(item->value.mcvoidptr);
+	if (level > MCHashTableLevelMax) {
+		return mc_hashtable_sizes[MCHashTableLevelMax];
+	}
+	return mc_hashtable_sizes[level];
+}
+
+mc_hashitem* get_item_bykey(mc_hashtable* const table_p, const char* key)
+{
+	if (table_p == null) {
+		error_log("get_item_bykey(table_p) table_p is nil return nil\n");
+		return null;
+	}
+	//try get index
+	return get_item_byhash(table_p, hash(key), key);
+}
+
+mc_hashitem* get_item_byindex(mc_hashtable* const table_p, const MCHashTableIndex index)
+{
+	if (table_p == null) {
+		error_log("get_item_byindex(table_p) table_p is nil return nil\n");
+		return null;
+	}
+	if (index > get_tablesize(table_p->level))
+		return null;
+	if (table_p->items[index] != null)
+		return table_p->items[index];
+	else
+		return null;
+}
+
+MCInline mc_class* alloc_mc_class(const MCSizeT objsize)
+{
+	MCHashTableLevel initlevel = MCHashTableLevel1;
+	mc_class* aclass = (mc_class*)malloc(sizeof(mc_class));
+	aclass->objsize = objsize;
+	//init pool
+	aclass->free_pool.lock = 0;
+	aclass->free_pool.tail = null;
+	aclass->used_pool.lock = 0;
+	aclass->used_pool.tail = null;
+	//init table
+	aclass->table = (mc_hashtable*)malloc(sizeof(mc_hashtable) + sizeof(mc_hashitem)*get_tablesize(initlevel));
+	aclass->table->lock = 0;
+	aclass->table->level = initlevel;
+	//aclass->table->table_item_count = 0;
+	//set all the slot to nil
+	for (MCHashTableSize i = 0; i < get_tablesize(initlevel); i++)
+		(aclass->table->items)[i] = null;
+	return aclass;
+}
+
+MCInline mc_class* findclass(const char* name)
+{
+	//create a class hashtable
+	if (mc_global_classtable == null)
+		mc_global_classtable = new_table(MCHashTableLevel1);
+
+	//cache
+	//    mc_hashitem* cache = mc_global_classtable->cache;
+	//    if (cache && cache->key == name) {
+	//        return (mc_class*)(cache->value.mcvoidptr);
+	//    }
+
+	mc_hashitem* item = get_item_byhash(mc_global_classtable, hash(name), name);
+	if (item == null)
+		return null;
+	else
+		runtime_log("findClass item key:%s, value:%p\n", item->key, item->value.mcvoidptr);
+	return (mc_class*)(item->value.mcvoidptr);
 }
 
 mc_class* _load(const char* name, size_t objsize, MCLoaderPointer loader)
